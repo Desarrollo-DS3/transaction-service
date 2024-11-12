@@ -17,7 +17,6 @@ public class SupplyUseCase implements ISupplyServicePort {
             supplyPersistencePort.registerSupply(supply);
         } catch (Exception e) {
             supplyNotifyPort.notifyRollback(supply);
-            throw e;
         }
     }
 }
