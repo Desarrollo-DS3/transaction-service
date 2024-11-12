@@ -12,6 +12,6 @@ public class SaleMessageSender {
     private RabbitTemplate rabbitTemplate;
 
     public void sendRollbackNotification(SaleRequest saleRequest) {
-        rabbitTemplate.convertAndSend("queue.purchase_restore_cart", saleRequest);
+        rabbitTemplate.convertAndSend("purchase_restore_stock", saleRequest);
     }
 }
