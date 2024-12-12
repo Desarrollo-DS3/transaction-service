@@ -16,36 +16,6 @@ public class RabbitConfig {
     }
 
     @Bean
-    public Queue purchaseRestoreCartQueue() {
-        return new Queue("purchase_restore_cart", false);
-    }
-
-    @Bean
-    public Queue purchaseDiscountStockQueue() {
-        return new Queue("purchase_discount_stock", false);
-    }
-
-    @Bean
-    public Queue purchaseRestoreStockQueue() {
-        return new Queue("purchase_restore_stock", false);
-    }
-
-    @Bean
-    public Queue purchaseRegisterTransactionQueue() {
-        return new Queue("purchase_register_transaction", false);
-    }
-
-    @Bean
-    public Queue supplyAddTransactionQueue() {
-        return new Queue("supply_add_transc", false);
-    }
-
-    @Bean
-    public Queue supplyRestoreStockQueue() {
-        return new Queue("supply_restore_stock", false);
-    }
-
-    @Bean
     public SimpleRabbitListenerContainerFactory rabbitListenerContainerFactory(ConnectionFactory connectionFactory, Jackson2JsonMessageConverter jackson2JsonMessageConverter) {
         SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
         factory.setConnectionFactory(connectionFactory);
